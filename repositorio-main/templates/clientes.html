@@ -1,0 +1,107 @@
+ <html lang="es">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+        <style>
+            p{ 
+                margin-bottom: 0;
+                padding-bottom: 0;
+                position: relative;
+                font-size: xx-large;
+            }
+            .contenedortabla{
+                left:46%;
+                position: absolute;
+                height: 20%;
+                background-color: #0B08C7;
+                border-radius: 15px;
+                width: 44%;
+            }
+            .titulotabla{
+
+
+                left: 35%;
+                position: relative;
+            }
+            table{
+                border-radius: 15px;
+                background-color: #0B08C7;
+                border-collapse: collapse;
+            }
+            th{
+                padding-right:-50px;
+                padding-left: -50px;
+                position: relative;
+                font-size: x-large;
+                border:2.5px solid white;
+            }
+            th,td,p{
+                position: relative;
+                color:white;
+                font-family: koulen;
+                font-weight: 100;
+            }
+            td{
+                border-right: 2px white solid;
+
+
+            }
+            td:last-child{
+
+                border-right: 0;
+            }
+            .botonespos{
+
+
+                position: relative;
+            }
+        </style>
+    </head> 
+    <body>
+        <a href="{{url_for('inicio')}}">
+        <img src="/static/images/BridoHome.png" width="80">
+    </a>
+    <div class="botonespos">
+        <a href="{{url_for('cargarclientes')}}">
+        <button class="boton">Cargar clientes</button></a><br><br>
+        <a href="{{url_for('modificarclientes')}}">
+        <button class="boton">Modificar clientes</button></a><br><br>
+        <button class="boton">Eliminar clientes </button><br><br>
+    </div>
+    <div class="contenedortabla">
+    <table width="100%">
+        <p class="titulotabla">pedidos ya cargados</p>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Domicilio</th>
+                <th>Pedido</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td align="center">pedro alvarado</td>
+            <td align="center">Luis pasteur 1320</td>
+            <td align="center">Cucurucho de dulce de leche</td>
+            <td align="center">10</td>
+        </tbody>
+        <tbody>
+            <td align="center">Juan Miguel</td>
+            <td align="center">sarmiento 2205</td>
+            <td align="center">Helado de agua sabor a limon</td>
+            <td align="center">3</td>
+
+        </tbody>
+        <tbody>
+            <td align="center">Juan Miguel</td>
+            <td align="center">sarmiento 2205</td>
+            <td align="center">Helado de agua sabor a limon</td>
+            <td align="center" >3</td>
+
+        </tbody>
+
+    </table>
+    </div>
+    </body>
+</html>

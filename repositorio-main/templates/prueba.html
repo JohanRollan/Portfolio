@@ -1,0 +1,133 @@
+<html lang="es">  
+<head>
+    <meta charset="UTF-8">
+    <title>Brido Prueba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+   
+<style>
+/* Estilos generales para las tablas */
+table {
+    width: 35%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-top: 0px;
+                
+    }
+
+    /* Encabezado de la tabla */
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #0400FF;
+        padding: 10px;
+    }
+
+    /* Encabezados de las columnas */
+    th {
+        background-color: #0400FF;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+        font-weight: 100;
+        font-family: rammeto;
+        border-bottom: 2px solid #003399;
+        border-top: 0px;
+    }
+
+    /* Filas de la tabla */
+    td {
+        padding: 10px;
+        text-align: left;
+        
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    /* Colores alternos para las filas */
+    tbody tr:nth-child(even) {
+        background-color: #ececff;
+    }
+    tbody tr {
+        transition-duration: 0.4s;
+        font-family: koulen;
+        background-color: #ececff;
+    }
+    /* Efecto hover en las filas */
+    tbody tr:hover {
+        background-color: #8a8aff;
+        cursor: pointer;
+    }
+
+    /* Bordes redondeados */
+    table,
+    th,
+    td {
+        text-align: center;
+        border-radius: 2px;
+        border: #000000 solid 1px;
+        border-bottom: 0px;
+        
+        border-right: #000000;
+    }
+   
+
+    /* Ajuste para la tabla en pantallas pequeñas */
+    @media (max-width: 768px) {
+        table {
+            width: 100%;
+        }
+        th,
+        td {
+            font-size: 0.9em;
+            padding: 8px;
+        }
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="tabla">
+        <table>
+            <caption>Prueba DB:</caption>
+            <thead class="titulotabla">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cliente in clientes %}
+                    <tr>
+                        {% for atributo in cliente %}
+                            <td>{{ atributo }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <table>
+            <thead class="titulotabla2">
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        {% for atributo in producto %}
+                            <td>{{ atributo }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</div>
+</html>
